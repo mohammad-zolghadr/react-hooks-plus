@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-plus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "private": false,
   "description": "Useful React Hooks and Functions",
@@ -33,6 +33,7 @@
     "generateRandom",
     "random number",
     "random string",
+    "copy to clipboard",
     "Mohammad Zolghadr"
   ],
   "author": "Mohammad Zolghadr",

@@ -1,14 +1,15 @@
 import {
-  useRandomNumber,
-  useRandomNumberDigit,
-  useRandomNumberRange,
-  useRandomNumberEven,
-  useRandomString,
-  useRandomStringLength,
-  useRandomStringSymbols,
-  useRandomStringSymbolsLength,
-  useCopyToClipboard,
-} from './lib/index';
+  randomNumber,
+  randomNumberDigit,
+  randomNumberRange,
+  randomNumberEven,
+  randomString,
+  randomStringLength,
+  randomStringSymbols,
+  randomStringSymbolsLength,
+} from './lib/funcs/index';
+
+import { useCopyToClipboard } from './lib/hooks/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -42,59 +43,59 @@ function App() {
         <div style={styleButtons}>
           <button
             onClick={() => {
-              console.log(useRandomNumber());
+              console.log(randomNumber());
             }}
           >
-            Use Random Int
+            Random Int
           </button>
           <button
             onClick={() => {
-              console.log(useRandomNumberDigit(7));
+              console.log(randomNumberDigit(7));
             }}
           >
-            Use Random Digit
+            Random Digit
           </button>
           <button
             onClick={() => {
-              console.log(useRandomNumberRange(1, 100));
+              console.log(randomNumberRange(1, 100));
             }}
           >
-            Use Random Range
+            Random Range
           </button>
           <button
             onClick={() => {
-              console.log(useRandomNumberEven(true, 1, 100));
+              console.log(randomNumberEven(true, 1, 100));
             }}
           >
-            Use Random Even
+            Random Even
           </button>
           <button
             onClick={() => {
-              console.log(useRandomString());
+              console.log(randomString());
             }}
           >
-            Use Random String
+            Random String
           </button>
           <button
             onClick={() => {
-              console.log(useRandomStringLength(12));
+              console.log(randomStringLength(12));
             }}
           >
-            Use Random String Range
+            Random String Range
           </button>
           <button
             onClick={() => {
-              console.log(useRandomStringSymbols());
+              console.log(randomStringSymbols());
             }}
           >
-            Use Random String Symbols
+            Random String Symbols
           </button>
           <button
             onClick={() => {
-              console.log(useRandomStringSymbolsLength(12));
+              console.log(randomStringSymbolsLength(12));
             }}
           >
-            Use Random String Symbols Range
+            Random String Symbols Range
           </button>
         </div>
       </div>

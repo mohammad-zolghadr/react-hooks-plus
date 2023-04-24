@@ -9,7 +9,7 @@ Currently, the following sections have been developed and you can use them
 
 <li><a href="#installation">Installation And Conditions</a></li>
 <details>
-<summary>useRandom</summary>
+<summary>Random Functions</summary>
 <ul>
 <li><a href="#random-number">A random number</a></li>
 <li><a href="#random-number-digits">A random number with an arbitrary number of digits</a></li>
@@ -37,22 +37,20 @@ or
 
 ---
 
-## <h2 id="use-random">useRandom <a href="#toc">&uarr;</a></h2>
-
----
+## <h2 id="use-random">Random Function <a href="#toc">&uarr;</a></h2>
 
 ### <h3 id="random-number">A Random Number <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
 ```javascript
-import { useRandomNumber } from 'react-hooks-plus';
+import { randomNumber } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
 
 ```javascript
-console.log(useRandomNumber());
+console.log(randomNumber());
 ```
 
 By doing this, a `random number (max 4 digits)` will appear for you in the log
@@ -64,7 +62,7 @@ By doing this, a `random number (max 4 digits)` will appear for you in the log
 First you need to import
 
 ```javascript
-import { useRandomNumberDigit } from 'react-hooks-plus';
+import { randomNumberDigit } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
@@ -72,7 +70,7 @@ And then to use it, proceed as follows :
 > As the input parameter of the function, you must enter a number so that your final output is a number with the desired number of digits
 
 ```javascript
-console.log(useRandomNumberDigit(7));
+console.log(randomNumberDigit(7));
 ```
 
 In this example, your log output will be a `7-digit random number`
@@ -84,7 +82,7 @@ In this example, your log output will be a `7-digit random number`
 First you need to import
 
 ```javascript
-import { useRandomNumberRange } from 'react-hooks-plus';
+import { randomNumberRange } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
@@ -92,7 +90,7 @@ And then to use it, proceed as follows :
 > As the input parameter of the function, you must enter two numbers as `min` and `max` so that your final output is a number in your desired range.
 
 ```javascript
-console.log(useRandomNumberRange(1, 100));
+console.log(randomNumberRange(1, 100));
 ```
 
 In this example, your log output will be a `random number between 1 and 100`
@@ -104,7 +102,7 @@ In this example, your log output will be a `random number between 1 and 100`
 First you need to import
 
 ```javascript
-import { useRandomNumberEven } from 'react-hooks-plus';
+import { randomNumberEven } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
@@ -113,7 +111,7 @@ And then to use it, proceed as follows :
 > The second and third parameters are related to your `determining the random number range`
 
 ```javascript
-console.log(useRandomNumberEven(true, 1, 100));
+console.log(randomNumberEven(true, 1, 100));
 ```
 
 In this example, your log output will be an `even random number between 1 and 100`
@@ -125,13 +123,13 @@ In this example, your log output will be an `even random number between 1 and 10
 First you need to import
 
 ```javascript
-import { useRandomString } from 'react-hooks-plus';
+import { randomString } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
 
 ```javascript
-console.log(useRandomString());
+console.log(randomString());
 ```
 
 By doing this, a `random string (max 5 char)` will appear for you in the log
@@ -143,7 +141,7 @@ By doing this, a `random string (max 5 char)` will appear for you in the log
 First you need to import
 
 ```javascript
-import { useRandomStringLength } from 'react-hooks-plus';
+import { randomStringLength } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
@@ -151,7 +149,7 @@ And then to use it, proceed as follows :
 > As an input parameter to the function, you must assign a number to it, which determines the `length of your string`
 
 ```javascript
-console.log(useRandomStringLength(12));
+console.log(randomStringLength(12));
 ```
 
 By doing this, your log output will be a `random string of 12 characters long`
@@ -163,13 +161,13 @@ By doing this, your log output will be a `random string of 12 characters long`
 First you need to import
 
 ```javascript
-import { useRandomStringSymbols } from 'react-hooks-plus';
+import { randomStringSymbols } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
 
 ```javascript
-console.log(useRandomStringSymbols());
+console.log(randomStringSymbols());
 ```
 
 By doing this, a `random string of letters, numbers and symbols (max 5 characters)` will appear for you in the log.
@@ -181,7 +179,7 @@ By doing this, a `random string of letters, numbers and symbols (max 5 character
 First you need to import
 
 ```javascript
-import { useRandomStringSymbolsLength } from 'react-hooks-plus';
+import { randomStringSymbolsLength } from 'react-hooks-plus/funcs';
 ```
 
 And then to use it, proceed as follows :
@@ -189,7 +187,7 @@ And then to use it, proceed as follows :
 > As an input parameter to the function, you must assign a number to it, which determines the `length of your string`
 
 ```javascript
-console.log(useRandomStringSymbolsLength(12));
+console.log(randomStringSymbolsLength(12));
 ```
 
 By doing this, your log output will be a `random string of letters, numbers, and symbols that is 12 characters long`
@@ -201,7 +199,7 @@ By doing this, your log output will be a `random string of letters, numbers, and
 First you need to import
 
 ```javascript
-import { useCopyToClipboard } from 'react-hooks-plus';
+import { useCopyToClipboard } from 'react-hooks-plus/hooks';
 ```
 
 Then, you can use this hook in your component like this:
