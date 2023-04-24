@@ -20,6 +20,8 @@ import { useDocTitle } from './lib/index';
 
 import { useOnClickOutside } from './lib/index';
 
+import { useHover } from './lib/index';
+
 const styleFlex: {} = {
   display: 'flex',
   alignItems: 'center',
@@ -56,6 +58,8 @@ function App() {
   };
 
   const myRef = useRef(null);
+
+  const [hoverRef, isHovered] = useHover();
 
   const handleClickOutside = () => {
     console.log('Clicked outside!');
@@ -157,6 +161,16 @@ function App() {
         ref={myRef}
       >
         Click outside this element and check the console!
+      </div>
+      <div
+        style={{
+          backgroundColor: '#343434',
+          padding: '10px',
+          color: '#aaa',
+        }}
+        ref={hoverRef}
+      >
+        {isHovered ? 'Is Hovered!' : 'Not Hovered!'}
       </div>
     </div>
   );

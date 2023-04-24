@@ -32,6 +32,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-local-storage">useLocalStorage</a></li>
 <li><a href="#use-document-title">useDocTitle</a></li>
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
+<li><a href="#use-hover">useHover</a></li>
 </ul>
 </details>
 
@@ -362,6 +363,36 @@ function App() {
   return (
     <div ref={ref}>
       <p>Click outside this element and check the console!</p>
+    </div>
+  );
+}
+```
+
+## <h2 id="use-hover">useHover <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useHover } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> To use this hook, you should note that it has two return values
+> The first value is a `ref`, which you must assign to the target element
+> And the second return value is a `boolean` whose **value becomes true whenever hover is performed on your element for which you have defined ref**.
+
+Example :
+
+```javascript
+import useHover from 'react-hooks-plus';
+
+function MyComponent() {
+  const [ref, isHovered] = useHover();
+
+  return (
+    <div ref={ref}>
+      <p>{isHovered ? 'Hovered!' : 'Not Hovered'}</p>
     </div>
   );
 }

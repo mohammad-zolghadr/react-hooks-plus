@@ -38,5 +38,8 @@ export { useLocalStorage };
 import useDocTitle from './hooks/useDocTitle';
 export { useDocTitle };
 // =========== on click outside
-import useOnClickOutside from './hooks/useOnClickOutSide';
+import useOnClickOutside from './hooks/useOnClickOutside';
 export { useOnClickOutside };
+// =========== on hover
+import useHover from './hooks/useHover';
+export { useHover };
