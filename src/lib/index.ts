@@ -1,3 +1,17 @@
-import { useRandomInt } from './ReactHooksPlus/useRandom';
+import {
+  useRandomNumber,
+  useRandomNumberDigit,
+  useRandomNumberRange,
+  useRandomNumberEven,
+  useRandomString,
+  useRandomStringLength,
+} from './ReactHooksPlus/useRandom';
 
-export { useRandomInt };
+export {
+  useRandomNumber,
+  useRandomNumberDigit,
+  useRandomNumberRange,
+  useRandomNumberEven,
+  useRandomString,
+  useRandomStringLength,
+};
