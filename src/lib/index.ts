@@ -1,3 +1,4 @@
+// useRandom
 import {
   useRandomNumber,
   useRandomNumberDigit,
@@ -8,7 +9,6 @@ import {
   useRandomStringSymbols,
   useRandomStringSymbolsLength,
 } from './ReactHooksPlus/useRandom';
-
 export {
   useRandomNumber,
   useRandomNumberDigit,
@@ -19,3 +19,7 @@ export {
   useRandomStringSymbols,
   useRandomStringSymbolsLength,
 };
+
+// useCopyToClipboard
+import useCopyToClipboard from './ReactHooksPlus/useCopyToClipboard';
+export { useCopyToClipboard };

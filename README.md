@@ -21,6 +21,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#random-string-symbols-length">A random string containing numbers, letters and symbols</a></li>
 </ul>
 </details>
+<li><a href="#copy-to-clipboard">useCopyToClipboard</a></li>
 
 ---
 
@@ -36,7 +37,7 @@ or
 
 ---
 
-## <h2 id="use-random">UseRandom <a href="#toc">&uarr;</a></h2>
+## <h2 id="use-random">useRandom <a href="#toc">&uarr;</a></h2>
 
 ---
 
@@ -192,5 +193,40 @@ console.log(useRandomStringSymbolsLength(12));
 ```
 
 By doing this, your log output will be a `random string of letters, numbers, and symbols that is 12 characters long`
+
+---
+
+## <h2 id="copy-to-clipboard">useCopyToClipboard <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useCopyToClipboard } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> `copyToClipboard` is a function that you must enter a value that you want to save to the clipboard as the input of this function.
+
+> `copied` is a boolean value that returns true `when the content is saved to the clipboard` and **returns false after 1.5 seconds**.
+> `copied` is used when you want to put a successful text in the relevant subfield to show the user that the content in question has been successfully saved to the clipboard.
+
+Example :
+
+```javascript
+function MyComponent() {
+  const { copied, copyToClipboard } = useCopyToClipboard();
+
+  return (
+    <div>
+      <button onClick={() => copyToClipboard('Some text to copy to clipboard')}>
+        Copy to clipboard
+      </button>
+      {copied && <p>Text copied to clipboard!</p>}
+    </div>
+  );
+}
+export default MyComponent;
+```
 
 ---

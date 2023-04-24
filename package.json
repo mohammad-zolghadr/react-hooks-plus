@@ -1,9 +1,9 @@
 {
   "name": "react-hooks-plus",
-  "version": "0.0.3",
+  "version": "0.1.1",
   "type": "module",
   "private": false,
-  "description": "Useful React Hooks",
+  "description": "Useful React Hooks and Functions",
   "main": "./dist/react-hooks-plus.umd.ts",
   "module": "./dist/react-hooks-plus.es.ts",
   "files": [
@@ -31,6 +31,8 @@
     "react use hooks",
     "useRandom",
     "generateRandom",
+    "random number",
+    "random string",
     "Mohammad Zolghadr"
   ],
   "author": "Mohammad Zolghadr",
@@ -43,7 +45,8 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -56,8 +59,5 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "typescript": "^5.0.2",
     "vite": "^4.3.0"
-  },
-  "dependencies": {
-    "path": "^0.12.7"
   }
 }
