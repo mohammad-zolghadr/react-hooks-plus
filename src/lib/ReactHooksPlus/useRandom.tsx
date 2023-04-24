@@ -26,6 +26,25 @@ function useRandomNumberEven(
 
 function useRandomString(): string {
   let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const charactersLength = characters.length;
+  for (let i = 0; i < 5; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+function useRandomStringLength(length: number): string {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
+
+function useRandomStringSymbols(): string {
+  let result = '';
   const characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
   const charactersLength = characters.length;
@@ -35,7 +54,7 @@ function useRandomString(): string {
   return result;
 }
 
-function useRandomStringLength(length: number): string {
+function useRandomStringSymbolsLength(length: number): string {
   const characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
   let result = '';
@@ -52,4 +71,6 @@ export {
   useRandomNumberEven,
   useRandomString,
   useRandomStringLength,
+  useRandomStringSymbols,
+  useRandomStringSymbolsLength,
 };

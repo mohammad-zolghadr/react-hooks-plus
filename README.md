@@ -162,13 +162,13 @@ By doing this, your log output will be a `random string of 12 characters long`
 First you need to import
 
 ```javascript
-import { useRandomSymbolsString } from 'react-hooks-plus';
+import { useRandomStringSymbols } from 'react-hooks-plus';
 ```
 
 And then to use it, proceed as follows :
 
 ```javascript
-console.log(useRandomSymbolsString());
+console.log(useRandomStringSymbols());
 ```
 
 By doing this, a `random string of letters, numbers and symbols (max 5 characters)` will appear for you in the log.

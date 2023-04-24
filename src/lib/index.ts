@@ -5,6 +5,8 @@ import {
   useRandomNumberEven,
   useRandomString,
   useRandomStringLength,
+  useRandomStringSymbols,
+  useRandomStringSymbolsLength,
 } from './ReactHooksPlus/useRandom';
 
 export {
@@ -14,4 +16,6 @@ export {
   useRandomNumberEven,
   useRandomString,
   useRandomStringLength,
+  useRandomStringSymbols,
+  useRandomStringSymbolsLength,
 };

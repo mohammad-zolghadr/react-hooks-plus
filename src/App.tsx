@@ -5,6 +5,8 @@ import {
   useRandomNumberEven,
   useRandomString,
   useRandomStringLength,
+  useRandomStringSymbols,
+  useRandomStringSymbolsLength,
 } from './lib/index';
 
 function App() {
@@ -61,6 +63,20 @@ function App() {
         }}
       >
         Use Random String Range
+      </button>
+      <button
+        onClick={() => {
+          console.log(useRandomStringSymbols());
+        }}
+      >
+        Use Random String Symbols
+      </button>
+      <button
+        onClick={() => {
+          console.log(useRandomStringSymbolsLength(12));
+        }}
+      >
+        Use Random String Symbols Range
       </button>
     </div>
   );
