@@ -1,4 +1,5 @@
-// random
+// Functions
+// =========== random
 import {
   randomNumber,
   randomNumberDigit,
@@ -8,7 +9,7 @@ import {
   randomStringLength,
   randomStringSymbols,
   randomStringSymbolsLength,
-} from './funcRandom';
+} from './funcs/funcRandom';
 export {
   randomNumber,
   randomNumberDigit,
@@ -19,3 +20,10 @@ export {
   randomStringSymbols,
   randomStringSymbolsLength,
 };
+// ===========
+
+// Hooks
+// =========== copy to clipboard
+import useCopyToClipboard from './hooks/useCopyToClipboard';
+export { useCopyToClipboard };
+// ===========

@@ -7,9 +7,9 @@ import {
   randomStringLength,
   randomStringSymbols,
   randomStringSymbolsLength,
-} from './lib/funcs/index';
+} from './lib/index';
 
-import { useCopyToClipboard } from './lib/hooks/index';
+import { useCopyToClipboard } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
