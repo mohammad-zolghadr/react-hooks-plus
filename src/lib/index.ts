@@ -34,3 +34,6 @@ export { useCopyToClipboard };
 // =========== local storage
 import useLocalStorage from './hooks/useLocalStorage';
 export { useLocalStorage };
+// =========== document title
+import useDocTitle from './hooks/useDocTitle';
+export { useDocTitle };

@@ -28,8 +28,9 @@ Currently, the following sections have been developed and you can use them
 </details>
 <details><summary>Hooks</summary>
 <ul>
-<li><a href="#copy-to-clipboard">useCopyToClipboard</a></li>
+<li><a href="#use-copy-to-clipboard">useCopyToClipboard</a></li>
 <li><a href="#use-local-storage">useLocalStorage</a></li>
+<li><a href="#use-document-title">useDocTitle</a></li>
 </ul>
 </details>
 
@@ -299,6 +300,32 @@ function PhoneNumberInput() {
     <input type='tel' value={phoneNumber} onChange={handlePhoneNumberChange} />
   );
 }
+```
+
+---
+
+## <h2 id="use-document-title">useDocTitle <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useDocTitle } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> It takes a **string** as input parameter
+
+```javascript
+const MyComponent = () => {
+  useDocTitle('My Component Title');
+
+  return (
+    <div>
+      <h1>My Component</h1>
+    </div>
+  );
+};
 ```
 
 ---

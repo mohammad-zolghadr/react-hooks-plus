@@ -14,6 +14,8 @@ import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
 
 import { useLocalStorage } from './lib/index';
 
+import { useDocTitle } from './lib/index';
+
 const styleFlex: {} = {
   display: 'flex',
   alignItems: 'center',
@@ -40,6 +42,8 @@ function App() {
   const { copied, copyToClipboard } = useCopyToClipboard();
 
   const [phoneNumber, setPhoneNumber] = useLocalStorage('phoneNumber', '');
+
+  useDocTitle('Changed By My Hook');
 
   const handlePhoneNumberChange = (
     event: React.ChangeEvent<HTMLInputElement>
