@@ -1,4 +1,4 @@
-// Functions
+// ================================ Functions =====================================
 // =========== random
 import {
   randomNumber,
@@ -27,7 +27,7 @@ import {
 } from './funcs/funcLocalStorage';
 export { saveToLocalStorage, getFromLocalStorage };
 
-// Hooks
+// ================================ Hooks =====================================
 // =========== copy to clipboard
 import useCopyToClipboard from './hooks/useCopyToClipboard';
 export { useCopyToClipboard };
@@ -37,3 +37,6 @@ export { useLocalStorage };
 // =========== document title
 import useDocTitle from './hooks/useDocTitle';
 export { useDocTitle };
+// =========== on click outside
+import useOnClickOutside from './hooks/useOnClickOutSide';
+export { useOnClickOutside };

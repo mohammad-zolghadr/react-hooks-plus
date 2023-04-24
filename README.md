@@ -31,6 +31,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-copy-to-clipboard">useCopyToClipboard</a></li>
 <li><a href="#use-local-storage">useLocalStorage</a></li>
 <li><a href="#use-document-title">useDocTitle</a></li>
+<li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 </ul>
 </details>
 
@@ -235,7 +236,7 @@ And in the log, you will receive the information stored with the `MY-KEY` key fr
 
 ---
 
-## <h2 id="copy-to-clipboard">useCopyToClipboard <a href="#toc">&uarr;</a></h2>
+## <h2 id="use-copy-to-clipboard">useCopyToClipboard <a href="#toc">&uarr;</a></h2>
 
 First you need to import
 
@@ -329,3 +330,39 @@ const MyComponent = () => {
 ```
 
 ---
+
+## <h2 id="use-on-click-outside">useOnClickOutside <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useOnClickOutside } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> This hook takes a `ref` as the first parameter and a `function` as the second parameter
+> So you have to assign this ref to an element on the page and create a function. This way, the function will be called **every time outside of your element is clicked**
+
+Example :
+
+```javascript
+import { useRef } from 'react';
+import useOnClickOutside from 'react-hooks-plus';
+
+function App() {
+  const ref = useRef(null);
+
+  const handleClickOutside = () => {
+    console.log('Clicked outside!');
+  };
+
+  useOnClickOutside(ref, handleClickOutside);
+
+  return (
+    <div ref={ref}>
+      <p>Click outside this element and check the console!</p>
+    </div>
+  );
+}
+```

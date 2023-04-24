@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import {
   randomNumber,
   randomNumberDigit,
@@ -15,6 +17,8 @@ import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
 import { useLocalStorage } from './lib/index';
 
 import { useDocTitle } from './lib/index';
+
+import { useOnClickOutside } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -50,6 +54,14 @@ function App() {
   ) => {
     setPhoneNumber(event.target.value);
   };
+
+  const myRef = useRef(null);
+
+  const handleClickOutside = () => {
+    console.log('Clicked outside!');
+  };
+
+  useOnClickOutside(myRef, handleClickOutside);
   return (
     <div style={styleContainer}>
       <div style={styleButtons}>
@@ -135,6 +147,16 @@ function App() {
           value={phoneNumber}
           onChange={handlePhoneNumberChange}
         />
+      </div>
+      <div
+        style={{
+          backgroundColor: '#343434',
+          padding: '10px',
+          color: '#aaa',
+        }}
+        ref={myRef}
+      >
+        Click outside this element and check the console!
       </div>
     </div>
   );
