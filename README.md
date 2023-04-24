@@ -8,7 +8,9 @@ Currently, the following sections have been developed and you can use them
 <h3 id="toc">Table of Content </h3>
 
 <li><a href="#installation">Installation And Conditions</a></li>
-<details>
+<details><summary>Functions</summary>
+<ul>
+<li><details>
 <summary>Random Functions</summary>
 <ul>
 <li><a href="#random-number">A random number</a></li>
@@ -20,8 +22,16 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#random-string-symbols">A random string containing numbers, letters and symbols</a></li>
 <li><a href="#random-string-symbols-length">A random string containing numbers, letters and symbols</a></li>
 </ul>
+</details></li>
+<li><a href="#func-local-storage">Local Storage</a></li>
+</ul>
 </details>
+<details><summary>Hooks</summary>
+<ul>
 <li><a href="#copy-to-clipboard">useCopyToClipboard</a></li>
+<li><a href="#use-local-storage">useLocalStorage</a></li>
+</ul>
+</details>
 
 ---
 
@@ -67,7 +77,7 @@ import { randomNumberDigit } from 'react-hooks-plus';
 
 And then to use it, proceed as follows :
 
-> As the input parameter of the function, you must enter a number so that your final output is a number with the desired number of digits
+> As the function parameter of the function, you must enter a number so that your final output is a number with the desired number of digits
 
 ```javascript
 console.log(randomNumberDigit(7));
@@ -87,7 +97,7 @@ import { randomNumberRange } from 'react-hooks-plus';
 
 And then to use it, proceed as follows :
 
-> As the input parameter of the function, you must enter two numbers as `min` and `max` so that your final output is a number in your desired range.
+> As the function parameter of the function, you must enter two numbers as `min` and `max` so that your final output is a number in your desired range.
 
 ```javascript
 console.log(randomNumberRange(1, 100));
@@ -107,7 +117,7 @@ import { randomNumberEven } from 'react-hooks-plus';
 
 And then to use it, proceed as follows :
 
-> As the input parameter of the function, you must enter a boolean value and two numbers as min and max. If the first parameter is true, it means your output is an `even number` and if it is false, it means your output is an `odd number`.
+> As the function parameter of the function, you must enter a boolean value and two numbers as min and max. If the first parameter is true, it means your output is an `even number` and if it is false, it means your output is an `odd number`.
 > The second and third parameters are related to your `determining the random number range`
 
 ```javascript
@@ -146,7 +156,7 @@ import { randomStringLength } from 'react-hooks-plus';
 
 And then to use it, proceed as follows :
 
-> As an input parameter to the function, you must assign a number to it, which determines the `length of your string`
+> As an function parameter to the function, you must assign a number to it, which determines the `length of your string`
 
 ```javascript
 console.log(randomStringLength(12));
@@ -184,13 +194,43 @@ import { randomStringSymbolsLength } from 'react-hooks-plus';
 
 And then to use it, proceed as follows :
 
-> As an input parameter to the function, you must assign a number to it, which determines the `length of your string`
+> As an function parameter to the function, you must assign a number to it, which determines the `length of your string`
 
 ```javascript
 console.log(randomStringSymbolsLength(12));
 ```
 
 By doing this, your log output will be a `random string of letters, numbers, and symbols that is 12 characters long`
+
+---
+
+## <h2 id="func-local-storage">Local Storage <a href="#toc">&uarr;</a></h3>
+
+First you need to import
+
+```javascript
+import { saveToLocalStorage, getFromLocalStorage } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+> In the `saveToLocalStorage` function, you must enter the `key` as the first function parameter, and in the second parameter, you must enter the `value` that you want to save in the browser storage.
+
+> In the `getFromLocalStorage` tab, you must enter the `key` value as an function parameter to return the value stored by this key from the browser's storage.
+
+```javascript
+// save to local
+const myFunction = () => {
+  saveToLocalStorage('MY-KEY', 'MY-VALUE');
+};
+
+// get from local
+console.log(getFromLocalStorage('MY-KEY'));
+```
+
+By doing this, you save the `MY-VALUE` value in the browser's memory with the `MY-KEY` key
+
+And in the log, you will receive the information stored with the `MY-KEY` key from the browser's storage
 
 ---
 
@@ -225,6 +265,40 @@ function MyComponent() {
   );
 }
 export default MyComponent;
+```
+
+---
+
+## <h2 id="use-local-storage">useLocalStorage <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useLocalStorage } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The first parameter of the useLocalStorage hook is the `key` that your value can be obtained in the browser storage with this key, and the second parameter is your `value`.
+
+> You should store the return value from the useLocalStorage hook **as a useState**. That is, a value and a setValue
+> And you can use this value, which is a react state, wherever you want
+> Also, using the setValue function, you can change the value wherever you want, and this value **change will also be done in the local storage**.
+
+Example :
+
+```javascript
+function PhoneNumberInput() {
+  const [phoneNumber, setPhoneNumber] = useLocalStorage('phoneNumber', '');
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
+  return (
+    <input type='tel' value={phoneNumber} onChange={handlePhoneNumberChange} />
+  );
+}
 ```
 
 ---

@@ -10,6 +10,9 @@ import {
 } from './lib/index';
 
 import { useCopyToClipboard } from './lib/index';
+import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
+
+import { useLocalStorage } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -36,6 +39,13 @@ const styleButtons: {} = {
 function App() {
   const { copied, copyToClipboard } = useCopyToClipboard();
 
+  const [phoneNumber, setPhoneNumber] = useLocalStorage('phoneNumber', '');
+
+  const handlePhoneNumberChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setPhoneNumber(event.target.value);
+  };
   return (
     <div style={styleContainer}>
       <div style={styleButtons}>
@@ -106,6 +116,21 @@ function App() {
           Copy to clipboard
         </button>
         {copied && <p>Text copied to clipboard!</p>}
+      </div>
+      <div style={{ ...styleFlexCol, gap: '10px' }}>
+        <button
+          onClick={() => {
+            saveToLocalStorage('MY-KEY', 'THEME-OFF');
+            console.log(getFromLocalStorage('MY-KEY'));
+          }}
+        >
+          Click To Save Data To Local Storage
+        </button>
+        <input
+          type='tel'
+          value={phoneNumber}
+          onChange={handlePhoneNumberChange}
+        />
       </div>
     </div>
   );
