@@ -1,4 +1,6 @@
-# Package is Developing ...
+# Package is Developing Yet ...
+
+Currently, I am updating the package **daily**. Please visit daily and check for updates
 
 # React Hooks Plus
 
@@ -34,12 +36,13 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 <li><a href="#use-hover">useHover</a></li>
 <li><a href="#use-fetch">useFetch</a></li>
-</details>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
 <li><a href="#use-con-group">useConGroup</a></li>
+<li><a href="#use-con-table">useConTable</a></li>
 </ul>
+</details>
 </details>
 </ul>
 </details>
@@ -58,7 +61,7 @@ or
 
 ---
 
-## <h2 id="use-random">Random Function <a href="#toc">&uarr;</a></h2>
+## <h2 id="use-random">Random Functions <a href="#toc">&uarr;</a></h2>
 
 ### <h3 id="random-number">A Random Number <a href="#toc">&uarr;</a></h3>
 
@@ -453,7 +456,9 @@ function MyComponent() {
 
 ---
 
-## <h2 id="use-con-log">useConLog <a href="#toc">&uarr;</a></h2>
+## <h2 id="use-console">Console Hooks <a href="#toc">&uarr;</a></h2>
+
+### <h3 id="use-con-log">useConLog <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -491,7 +496,7 @@ function MyComponent() {
 
 ---
 
-## <h2 id="useConGroup">useConGroup <a href="#toc">&uarr;</a></h2>
+### <h3 id="useConGroup">useConGroup <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -521,4 +526,42 @@ const MyComponent = () => {
 
   // rest of your component code
 };
+```
+
+### <h3 id="use-con-table">useConTable <a href="#toc">&uarr;</a></h3>
+
+First you need to import
+
+```javascript
+import { useConTable } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> You can use the `useConTable` hook to log a table of our data to the console every time it changes
+
+> 1.  The `data` parameter (First Parameter) is an **array of values ​​that you want to print in the log**
+> 2.  The `columns` parameter (Second Parameter) is an **array of strings representing the properties of the objects you want to display in the table**.
+
+**In general, this hook for debugging will greatly speed up your work**
+
+Example :
+
+```javascript
+import React, { useState } from 'react';
+import useConTable from 'react-hooks-plus';
+
+function App() {
+  const [data, setData] = useState([
+    { id: 1, name: 'Alice', age: 25 },
+    { id: 2, name: 'Bob', age: 30 },
+    { id: 3, name: 'Charlie', age: 35 },
+  ]);
+
+  useConTable(data, ['name', 'age']);
+
+  // rest of your code
+}
+
+export default App;
 ```

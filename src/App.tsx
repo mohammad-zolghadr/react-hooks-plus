@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   randomNumber,
@@ -24,6 +24,7 @@ import { useOnClickOutside } from './lib/index';
 import { useHover } from './lib/index';
 import { useFetch } from './lib/index';
 import { useConLog } from './lib/index';
+import { useConTable } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -80,6 +81,14 @@ function App() {
   useConGroup(data, 'My Group Label');
 
   useOnClickOutside(myRef, handleClickOutside);
+
+  const [conData, setConData] = useState([
+    { id: 1, name: 'Alice', age: 25 },
+    { id: 2, name: 'Bob', age: 30 },
+    { id: 3, name: 'Charlie', age: 35 },
+  ]);
+  useConTable(conData, ['name', 'age']);
+
   return (
     <div style={styleContainer}>
       <div style={styleButtons}>

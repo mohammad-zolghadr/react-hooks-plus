@@ -39,6 +39,10 @@
     "useOnClickOutside",
     "useHover",
     "useFetch",
+    "useConsoleLog",
+    "useConsoleGroup",
+    "useConsoleGroupCollapse",
+    "useConsoleTable",
     "Mohammad Zolghadr"
   ],
   "author": "Mohammad Zolghadr",

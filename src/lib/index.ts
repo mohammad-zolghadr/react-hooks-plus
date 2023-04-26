@@ -49,4 +49,5 @@ export { useFetch };
 // =========== console
 import useConLog from './hooks/useConsole/useConLog';
 import useConGroup from './hooks/useConsole/useConGroup';
-export { useConLog, useConGroup };
+import useConTable from './hooks/useConsole/useConTable';
+export { useConLog, useConGroup, useConTable };
