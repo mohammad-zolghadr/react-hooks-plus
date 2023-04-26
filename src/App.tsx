@@ -9,6 +9,7 @@ import {
   randomStringLength,
   randomStringSymbols,
   randomStringSymbolsLength,
+  useLogState,
 } from './lib/index';
 
 import { useCopyToClipboard } from './lib/index';
@@ -73,6 +74,8 @@ function App() {
   useEffect(() => {
     data && console.log(data);
   }, [data]);
+
+  useLogState(isLoading);
 
   useOnClickOutside(myRef, handleClickOutside);
   return (

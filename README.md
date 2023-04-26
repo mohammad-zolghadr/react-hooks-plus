@@ -34,6 +34,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 <li><a href="#use-hover">useHover</a></li>
 <li><a href="#use-fetch">useFetch</a></li>
+<li><a href="#use-log-state">useLogState</a></li>
 </ul>
 </details>
 
@@ -369,6 +370,8 @@ function App() {
 }
 ```
 
+---
+
 ## <h2 id="use-hover">useHover <a href="#toc">&uarr;</a></h2>
 
 First you need to import
@@ -398,6 +401,8 @@ function MyComponent() {
   );
 }
 ```
+
+---
 
 ## <h2 id="use-fetch">useFetch <a href="#toc">&uarr;</a></h2>
 
@@ -435,6 +440,44 @@ function MyComponent() {
     <div>
       <h1>{data?.title}</h1>
       <div>{data?.body}</div>
+    </div>
+  );
+}
+```
+
+---
+
+## <h2 id="use-log-state">useLogState <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useLogState } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useLogState` hook actually **executes once every time the state changes and prints a message in console.log**. You can also enter the text of the message manually
+
+> The first parameter of this hook is your `state`
+> Your second parameter is the `text of the message`, **this part is optional** and you can not enter a message
+
+**In general, this hook for debugging will greatly speed up your work**
+
+Example :
+
+```javascript
+import useLogState from 'react-hooks-plus';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useLogState(count);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase count</button>
     </div>
   );
 }
