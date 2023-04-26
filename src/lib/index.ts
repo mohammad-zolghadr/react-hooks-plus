@@ -43,3 +43,6 @@ export { useOnClickOutside };
 // =========== on hover
 import useHover from './hooks/useHover';
 export { useHover };
+// =========== fetch
+import useFetch from './hooks/useFetch';
+export { useFetch };

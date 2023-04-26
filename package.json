@@ -38,6 +38,7 @@
     "useLocalStorage",
     "useOnClickOutside",
     "useHover",
+    "useFetch",
     "Mohammad Zolghadr"
   ],
   "author": "Mohammad Zolghadr",

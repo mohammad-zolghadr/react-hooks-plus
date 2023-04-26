@@ -33,6 +33,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-document-title">useDocTitle</a></li>
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 <li><a href="#use-hover">useHover</a></li>
+<li><a href="#use-fetch">useFetch</a></li>
 </ul>
 </details>
 
@@ -393,6 +394,47 @@ function MyComponent() {
   return (
     <div ref={ref}>
       <p>{isHovered ? 'Hovered!' : 'Not Hovered'}</p>
+    </div>
+  );
+}
+```
+
+## <h2 id="use-fetch">useFetch <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useFetch } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The useFetch hook takes the `url` of an API as an input parameter and gives you three return values
+
+> 1.  One of the return values ​​is `isLoading`, which is a Boolean value and from the time the request is sent, until the response is received from the API side, its value is **true**, and when the response is received (whether it encounters an error or data) are received safely, its value will be **false**
+> 2.  Another return value is `error`, which returns an error if there is an error
+> 3.  And another return value is `data`, which contains the fetched data from the API (the response from the API)
+
+Example :
+
+```javascript
+import { useFetch } from 'react-hooks-plus';
+
+function MyComponent() {
+  const { data, isLoading, error } = useFetch('/api/data');
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <div>
+      <h1>{data?.title}</h1>
+      <div>{data?.body}</div>
     </div>
   );
 }

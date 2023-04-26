@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import {
   randomNumber,
@@ -21,6 +21,7 @@ import { useDocTitle } from './lib/index';
 import { useOnClickOutside } from './lib/index';
 
 import { useHover } from './lib/index';
+import { useFetch } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -49,6 +50,10 @@ function App() {
 
   const [phoneNumber, setPhoneNumber] = useLocalStorage('phoneNumber', '');
 
+  const { data, isLoading, error } = useFetch(
+    'https://jsonplaceholder.typicode.com/posts/1'
+  );
+
   useDocTitle('Changed By My Hook');
 
   const handlePhoneNumberChange = (
@@ -65,9 +70,19 @@ function App() {
     console.log('Clicked outside!');
   };
 
+  useEffect(() => {
+    data && console.log(data);
+  }, [data]);
+
   useOnClickOutside(myRef, handleClickOutside);
   return (
     <div style={styleContainer}>
+      <div style={styleButtons}>
+        <p style={{ color: isLoading ? '#888' : '#33ee33' }}>
+          {isLoading ? 'Connecting to API' : 'Connected to API Check The Log'}
+        </p>
+      </div>
+
       <div style={styleButtons}>
         <p>See Log For Result</p>
         <div style={styleButtons}>
@@ -129,48 +144,49 @@ function App() {
           </button>
         </div>
       </div>
-      <div>
+      <div style={styleButtons}>
         <button
           onClick={() => copyToClipboard('Some text to copy to clipboard')}
         >
           Copy to clipboard
         </button>
         {copied && <p>Text copied to clipboard!</p>}
-      </div>
-      <div style={{ ...styleFlexCol, gap: '10px' }}>
-        <button
-          onClick={() => {
-            saveToLocalStorage('MY-KEY', 'THEME-OFF');
-            console.log(getFromLocalStorage('MY-KEY'));
+        <div></div>
+        <div style={{ ...styleFlexCol, gap: '10px' }}>
+          <button
+            onClick={() => {
+              saveToLocalStorage('MY-KEY', 'THEME-OFF');
+              console.log(getFromLocalStorage('MY-KEY'));
+            }}
+          >
+            Click To Save Data To Local Storage
+          </button>
+          <input
+            type='tel'
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+          />
+        </div>
+        <div
+          style={{
+            backgroundColor: '#343434',
+            padding: '10px',
+            color: '#aaa',
           }}
+          ref={myRef}
         >
-          Click To Save Data To Local Storage
-        </button>
-        <input
-          type='tel'
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
-        />
-      </div>
-      <div
-        style={{
-          backgroundColor: '#343434',
-          padding: '10px',
-          color: '#aaa',
-        }}
-        ref={myRef}
-      >
-        Click outside this element and check the console!
-      </div>
-      <div
-        style={{
-          backgroundColor: '#343434',
-          padding: '10px',
-          color: '#aaa',
-        }}
-        ref={hoverRef}
-      >
-        {isHovered ? 'Is Hovered!' : 'Not Hovered!'}
+          Click outside this element and check the console!
+        </div>
+        <div
+          style={{
+            backgroundColor: '#343434',
+            padding: '10px',
+            color: '#aaa',
+          }}
+          ref={hoverRef}
+        >
+          {isHovered ? 'Is Hovered!' : 'Not Hovered!'}
+        </div>
       </div>
     </div>
   );
