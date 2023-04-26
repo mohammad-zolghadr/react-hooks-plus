@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { setPrecisionForDecimal } from '../..';
 
 type Time = {
   start: number;
@@ -11,7 +12,7 @@ const useConTime = (text: string = 'Time Taken: ') => {
   useEffect(() => {
     if (time.start !== null && time.end !== null) {
       const diff = time.end - time.start;
-      console.log(`${text}${diff}ms`);
+      console.log(`${text}${setPrecisionForDecimal(diff, 3)}ms`);
     }
   }, [time]);
 

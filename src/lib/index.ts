@@ -26,6 +26,9 @@ import {
   getFromLocalStorage,
 } from './funcs/funcLocalStorage';
 export { saveToLocalStorage, getFromLocalStorage };
+// ========== decimal
+import setPrecisionForDecimal from './funcs/funcDecimalNumber';
+export { setPrecisionForDecimal };
 
 // ================================ Hooks =====================================
 // =========== copy to clipboard

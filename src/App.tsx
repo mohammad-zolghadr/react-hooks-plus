@@ -9,21 +9,19 @@ import {
   randomStringLength,
   randomStringSymbols,
   randomStringSymbolsLength,
-  useConGroup,
 } from './lib/index';
-
-import { useCopyToClipboard } from './lib/index';
 import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
+import { setPrecisionForDecimal } from './lib/index';
 
+// Hooks
+import { useCopyToClipboard } from './lib/index';
 import { useLocalStorage } from './lib/index';
-
 import { useDocTitle } from './lib/index';
-
 import { useOnClickOutside } from './lib/index';
-
 import { useHover } from './lib/index';
 import { useFetch } from './lib/index';
 import { useConLog } from './lib/index';
+import { useConGroup } from './lib/index';
 import { useConTable } from './lib/index';
 import { useConTime } from './lib/index';
 
@@ -79,21 +77,21 @@ function App() {
 
   useOnClickOutside(myRef, handleClickOutside);
 
-  const [conData, setConData] = useState([
-    { id: 1, name: 'Alice', age: 25 },
-    { id: 2, name: 'Bob', age: 30 },
-    { id: 3, name: 'Charlie', age: 35 },
-  ]);
-  useConTable(conData, ['name', 'age']);
-
   const { startConsole, endConsole } = useConTime('Data Loaded in : ');
 
   useEffect(() => {
     startConsole();
   }, []);
 
+  const tableData = [
+    { title: 'iPhone 14', price: '1999$' },
+    { title: 'Xiaomi Redmi 9T', price: '549$' },
+  ];
+  useConTable(tableData, ['price', 'price']);
+
   useEffect(() => {
     data && endConsole();
+    console.log(setPrecisionForDecimal(1275.5683535, 4));
   }, [data]);
 
   return (

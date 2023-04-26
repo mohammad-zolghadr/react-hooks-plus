@@ -26,6 +26,7 @@ Currently, the following sections have been developed and you can use them
 </ul>
 </details></li>
 <li><a href="#func-local-storage">Local Storage</a></li>
+<li><a href="#func-decimal-precision">Decimal With Precision</a></li>
 </ul>
 </details>
 <details><summary>Hooks</summary>
@@ -246,6 +247,30 @@ console.log(getFromLocalStorage('MY-KEY'));
 By doing this, you save the `MY-VALUE` value in the browser's memory with the `MY-KEY` key
 
 And in the log, you will receive the information stored with the `MY-KEY` key from the browser's storage
+
+---
+
+## <h2 id="func-decimal-precision">Decimal With Precision <a href="#toc">&uarr;</a></h3>
+
+First you need to import
+
+```javascript
+import { setPrecisionForDecimal } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+> You can limit the number of digits of a decimal number by using the `setPrecisionForDecimal` function
+
+> 1.  The first parameter is `your number`, which can be a decimal number or an integer
+> 2.  The second parameter is the `number of decimal digits`.
+
+```javascript
+setPrecisionForDecimal(3.14159, 2); // Output: 3.14
+setPrecisionForDecimal(3, 2); // Output: 3
+setPrecisionForDecimal(3.14159, 0); // Output: 3
+setPrecisionForDecimal(3.1485, 2); // Output: 3.15
+```
 
 ---
 
