@@ -25,6 +25,7 @@ import { useHover } from './lib/index';
 import { useFetch } from './lib/index';
 import { useConLog } from './lib/index';
 import { useConTable } from './lib/index';
+import { useConTime } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -73,10 +74,6 @@ function App() {
     console.log('Clicked outside!');
   };
 
-  useEffect(() => {
-    data && console.log(data);
-  }, [data]);
-
   useConLog(isLoading);
   useConGroup(data, 'My Group Label');
 
@@ -89,6 +86,16 @@ function App() {
   ]);
   useConTable(conData, ['name', 'age']);
 
+  const { startConsole, endConsole } = useConTime('Data Loaded in : ');
+
+  useEffect(() => {
+    startConsole();
+  }, []);
+
+  useEffect(() => {
+    data && endConsole();
+  }, [data]);
+
   return (
     <div style={styleContainer}>
       <div style={styleButtons}>
@@ -96,7 +103,6 @@ function App() {
           {isLoading ? 'Connecting to API' : 'Connected to API Check The Log'}
         </p>
       </div>
-
       <div style={styleButtons}>
         <p>See Log For Result</p>
         <div style={styleButtons}>

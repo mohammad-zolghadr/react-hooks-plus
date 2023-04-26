@@ -41,6 +41,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-con-log">useConLog</a></li>
 <li><a href="#use-con-group">useConGroup</a></li>
 <li><a href="#use-con-table">useConTable</a></li>
+<li><a href="#use-con-time">useConTime</a></li>
 </ul>
 </details>
 </details>
@@ -564,4 +565,43 @@ function App() {
 }
 
 export default App;
+```
+
+---
+
+### <h3 id="use-con-time">useConTime <a href="#toc">&uarr;</a></h3>
+
+First you need to import
+
+```javascript
+import { useConTime } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useConTime` hook returns two functions: `startConsole` and `endConsole`. You can call `startConsole` at the beginning of the operation you want to measure, and call `endConsole` when the operation is complete. The hook **prints the time taken to the console in milliseconds**.
+
+> You can assign the input parameter to useConTime and you can leave it blank. This input parameter, which must be a string, **displays the text inside the console before the time**. If your text is empty, the default text is this : `Time Taken: 136ms`
+
+> **In general, this hook for debugging will greatly speed up your work**
+
+Example :
+
+```javascript
+import React from 'react';
+import useConTime from 'react-hooks-plus';
+
+const MyComponent = () => {
+  const { startConsole, endConsole } = useConTime();
+
+  const handleClick = () => {
+    startConsole();
+    // do some heavy calculations or API calls here
+    endConsole();
+  };
+
+  return <button onClick={handleClick}>Click me</button>;
+};
+
+export default MyComponent;
 ```

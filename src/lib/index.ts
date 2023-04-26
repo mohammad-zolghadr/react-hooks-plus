@@ -50,4 +50,5 @@ export { useFetch };
 import useConLog from './hooks/useConsole/useConLog';
 import useConGroup from './hooks/useConsole/useConGroup';
 import useConTable from './hooks/useConsole/useConTable';
-export { useConLog, useConGroup, useConTable };
+import useConTime from './hooks/useConsole/useConTime';
+export { useConLog, useConGroup, useConTable, useConTime };
