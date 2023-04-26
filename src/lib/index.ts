@@ -46,6 +46,7 @@ export { useHover };
 // =========== fetch
 import useFetch from './hooks/useFetch';
 export { useFetch };
-// =========== log
-import useLogState from './hooks/useLog/useStateLog';
-export { useLogState };
+// =========== console
+import useConLog from './hooks/useConsole/useConLog';
+import useConGroup from './hooks/useConsole/useConGroup';
+export { useConLog, useConGroup };

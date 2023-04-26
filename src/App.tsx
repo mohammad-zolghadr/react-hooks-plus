@@ -9,7 +9,7 @@ import {
   randomStringLength,
   randomStringSymbols,
   randomStringSymbolsLength,
-  useLogState,
+  useConGroup,
 } from './lib/index';
 
 import { useCopyToClipboard } from './lib/index';
@@ -23,6 +23,7 @@ import { useOnClickOutside } from './lib/index';
 
 import { useHover } from './lib/index';
 import { useFetch } from './lib/index';
+import { useConLog } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -75,7 +76,8 @@ function App() {
     data && console.log(data);
   }, [data]);
 
-  useLogState(isLoading);
+  useConLog(isLoading);
+  useConGroup(data, 'My Group Label');
 
   useOnClickOutside(myRef, handleClickOutside);
   return (

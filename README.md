@@ -34,7 +34,13 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 <li><a href="#use-hover">useHover</a></li>
 <li><a href="#use-fetch">useFetch</a></li>
-<li><a href="#use-log-state">useLogState</a></li>
+</details>
+<details><summary>Use Console</summary>
+<ul>
+<li><a href="#use-con-log">useConLog</a></li>
+<li><a href="#use-con-group">useConGroup</a></li>
+</ul>
+</details>
 </ul>
 </details>
 
@@ -447,32 +453,32 @@ function MyComponent() {
 
 ---
 
-## <h2 id="use-log-state">useLogState <a href="#toc">&uarr;</a></h2>
+## <h2 id="use-con-log">useConLog <a href="#toc">&uarr;</a></h2>
 
 First you need to import
 
 ```javascript
-import { useLogState } from 'react-hooks-plus';
+import { useConLog } from 'react-hooks-plus';
 ```
 
 Then, you can use this hook in your component like this:
 
-> The `useLogState` hook actually **executes once every time the state changes and prints a message in console.log**. You can also enter the text of the message manually
+> The `useConLog` hook actually **executes once every time the state changes and prints a message in console.log**. You can also enter the text of the message manually
 
-> The first parameter of this hook is your `state`
-> Your second parameter is the `text of the message`, **this part is optional** and you can not enter a message
+> The first parameter of this hook is your `Content ot State`
+> Your second parameter is the `text of the message`, **this part is optional** and You can leave this field blank
 
 **In general, this hook for debugging will greatly speed up your work**
 
 Example :
 
 ```javascript
-import useLogState from 'react-hooks-plus';
+import useConLog from 'react-hooks-plus';
 
 function MyComponent() {
   const [count, setCount] = useState(0);
 
-  useLogState(count);
+  useConLog(count);
 
   return (
     <div>
@@ -481,4 +487,38 @@ function MyComponent() {
     </div>
   );
 }
+```
+
+---
+
+## <h2 id="useConGroup">useConGroup <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useConGroup } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useConGroup` hook actually **creates a group in your console and displays your content as a collapse**
+> You can easily print your contents grouped in the console
+
+> The first parameter of this hook is your `Content or State`
+> Your second parameter is the `label of the group`, **this part is optional** and You can leave this field blank
+
+**In general, this hook for debugging will greatly speed up your work**
+
+Example :
+
+```javascript
+import useConsoleGroup from 'react-hooks-plus';
+
+const MyComponent = () => {
+  const data = { name: 'John', age: 27 };
+
+  useConsoleGroup(data, 'User Data');
+
+  // rest of your component code
+};
 ```
