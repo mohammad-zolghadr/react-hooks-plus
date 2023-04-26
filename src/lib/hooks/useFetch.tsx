@@ -16,10 +16,7 @@ interface FetchOptions {
   headers?: Headers;
 }
 
-const useFetch = <T = any,>(
-  url: string,
-  options?: FetchOptions
-): FetchState => {
+const useFetch = (url: string, options?: FetchOptions): FetchState => {
   const [state, setState] = useState<FetchState>(initialState);
 
   useEffect(() => {
@@ -29,7 +26,7 @@ const useFetch = <T = any,>(
         const response = await fetch(url, options);
         const data = await response.json();
         setState({ data, isLoading: false, error: null });
-      } catch (error) {
+      } catch (error: any) {
         setState({ data: null, isLoading: false, error });
       }
     };

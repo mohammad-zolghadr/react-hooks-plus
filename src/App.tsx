@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import {
   randomNumber,
@@ -24,6 +24,7 @@ import { useConLog } from './lib/index';
 import { useConGroup } from './lib/index';
 import { useConTable } from './lib/index';
 import { useConTime } from './lib/index';
+import { useMedia } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -52,7 +53,7 @@ function App() {
 
   const [phoneNumber, setPhoneNumber] = useLocalStorage('phoneNumber', '');
 
-  const { data, isLoading, error } = useFetch(
+  const { data, isLoading } = useFetch(
     'https://jsonplaceholder.typicode.com/posts/1'
   );
 
@@ -72,7 +73,6 @@ function App() {
     console.log('Clicked outside!');
   };
 
-  useConLog(isLoading);
   useConGroup(data, 'My Group Label');
 
   useOnClickOutside(myRef, handleClickOutside);
@@ -93,6 +93,10 @@ function App() {
     data && endConsole();
     console.log(setPrecisionForDecimal(1275.5683535, 4));
   }, [data]);
+
+  const isMobile = useMedia(['(max-width: 767px)'], [true], false);
+
+  useConLog(isMobile, 'MediaQuery is under 767px : ');
 
   return (
     <div style={styleContainer}>

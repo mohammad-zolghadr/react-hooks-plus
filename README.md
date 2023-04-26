@@ -1,4 +1,4 @@
-# Package is Developing Yet ...
+# <span style="color:red">🔴Package is Developing Yet🔴</span>
 
 Currently, I am updating the package **daily**. Please visit daily and check for updates
 
@@ -37,6 +37,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-on-click-outside">useOnClickOutside</a></li>
 <li><a href="#use-hover">useHover</a></li>
 <li><a href="#use-fetch">useFetch</a></li>
+<li><a href="#use-media">useMedia</a></li>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
@@ -475,6 +476,41 @@ function MyComponent() {
     <div>
       <h1>{data?.title}</h1>
       <div>{data?.body}</div>
+    </div>
+  );
+}
+```
+
+---
+
+## <h2 id="use-media">useMedia <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useMedia } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> useMedia(queries: string[], values: T[], defaultValue: T)
+> `Queries` must be an `array of CSS media queries` (e.g. ['(max-width: 768px)', '(orientation: landscape)']).
+> `Values` must be an `array of any type`, corresponding to the queries (e.g. [true, 'large']).
+> `DefaultValue` is the value returned when none of the media queries match (e.g. false).
+> The hook returns the **current value, based on the current screen size**.
+
+Example :
+
+```javascript
+import React from 'react';
+import useMedia from 'react-hooks-plus';
+
+function App() {
+  const isMobile = useMedia(['(max-width: 767px)'], [true], false);
+
+  return (
+    <div>
+      <h1>You are browsing on {isMobile ? 'mobile' : 'desktop'}</h1>
     </div>
   );
 }
