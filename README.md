@@ -1,11 +1,25 @@
-# <span style="color:red">🔴Package is Developing Yet🔴</span>
+<img src="https://user-images.githubusercontent.com/48680310/234998416-795877dd-d7cd-44d1-b788-f819605f7785.png" />
 
-Currently, I am updating the package **daily**. Please visit daily and check for updates
+<div style="display:flex">
 
-# React Hooks Plus
+<a href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/badge/-on github-323232?style=flat&logo=github&logoColor=white"/></a>
+<span> </span>
+<a href="https://npmjs.org/package/react-hooks-plus"><img src="https://img.shields.io/badge/-on npm-bb2222?style=flat&logo=npm"/></a>
+<span> </span>
 
-In this package, we have developed complete hooks and functional functions for you to do your projects more easily, quickly and accurately.
-Currently, the following sections have been developed and you can use them
+[![install size](https://packagephobia.com/badge?p=react-hooks-plus)](https://packagephobia.com/result?p=react-hooks-plus)
+<span> </span>
+
+[![NPM Downloads](https://img.shields.io/npm/dm/react-hooks-plus.svg?style=flat)](https://npmcharts.com/compare/react-hooks-plus?minimal=true)
+<span> </span>
+
+<a  href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/github/stars/mohammad-zolghadr/react-hooks-plus?label=star%20on%20github&logoColor=%23222222&style=flat" /></a>
+
+</div>
+
+<a href="#contact-me">📞 Who I am and how to communicate with me</a>
+
+Increasing **speed** and **accuracy** is one of the main criteria for cleaner and better coding
 
 <h3 id="toc">Table of Content </h3>
 
@@ -15,14 +29,14 @@ Currently, the following sections have been developed and you can use them
 <li><details>
 <summary>Random Functions</summary>
 <ul>
-<li><a href="#random-number">A random number</a></li>
-<li><a href="#random-number-digits">A random number with an arbitrary number of digits</a></li>
-<li><a href="#random-number-range">A random number with an arbitrary range</a></li>
-<li><a href="#random-number-even-range">An even or odd random number with an arbitrary range</a></li>
-<li><a href="#random-string">A random string containing letters</a></li>
-<li><a href="#random-string-length">A random string containing letters with the ability to specify the length</a></li>
-<li><a href="#random-string-symbols">A random string containing numbers, letters and symbols</a></li>
-<li><a href="#random-string-symbols-length">A random string containing numbers, letters and symbols</a></li>
+<li><a href="#random-number">randomNumber</a></li>
+<li><a href="#random-number-digits">randomNumberDigit</a></li>
+<li><a href="#random-number-range">randomNumberRange</a></li>
+<li><a href="#random-number-even-range">randomNumberEven</a></li>
+<li><a href="#random-string">randomString</a></li>
+<li><a href="#random-string-length">randomStringLength</a></li>
+<li><a href="#random-string-symbols">randomStringSymbols</a></li>
+<li><a href="#random-string-symbols-length">randomStringSymbolsLength</a></li>
 </ul>
 </details></li>
 <li>
@@ -95,7 +109,7 @@ or
 
 ## <h2 id="random-functions">Random Functions <a href="#toc">&uarr;</a></h2>
 
-### <h3 id="random-number">A Random Number <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-number">randomNumber <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -113,7 +127,7 @@ By doing this, a `random number (max 4 digits)` will appear for you in the log
 
 ---
 
-### <h3 id="random-number-digits">A random number with an arbitrary number of digits <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-number-digits">randomNumberDigit <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -133,7 +147,7 @@ In this example, your log output will be a `7-digit random number`
 
 ---
 
-### <h3 id="random-number-range">A random number with an arbitrary range <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-number-range">randomNumberRange <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -153,7 +167,7 @@ In this example, your log output will be a `random number between 1 and 100`
 
 ---
 
-### <h3 id="random-number-even-range">An even or odd random number with an arbitrary range <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-number-even-range">randomNumberEven <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -174,7 +188,7 @@ In this example, your log output will be an `even random number between 1 and 10
 
 ---
 
-### <h3 id="random-string">A random string containing letters <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-string">randomString <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -192,7 +206,7 @@ By doing this, a `random string (max 5 char)` will appear for you in the log
 
 ---
 
-### <h3 id="random-string-length">A random string containing letters with the ability to specify the length <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-string-length">randomStringLength <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -212,7 +226,7 @@ By doing this, your log output will be a `random string of 12 characters long`
 
 ---
 
-### <h3 id="random-string-symbols">A random string containing numbers, letters and symbols <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-string-symbols">randomStringSymbols <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -230,7 +244,7 @@ By doing this, a `random string of letters, numbers and symbols (max 5 character
 
 ---
 
-### <h3 id="random-string-symbols-length">A random string containing numbers, letters and symbols with the ability to specify the length <a href="#toc">&uarr;</a></h3>
+### <h3 id="random-string-symbols-length">randomStringSymbolsLength <a href="#toc">&uarr;</a></h3>
 
 First you need to import
 
@@ -1161,3 +1175,26 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
+
+---
+
+# <h2 id="contact-me">📞 Who I am and how to communicate with me <a href="#toc">&uarr;</a></h2>
+
+I am a Freelance Frontend Web Developer with patience and creativity and caring for projects. I am ready to cooperate with the latest technologies such as React.js and TailwindCss to build a stylish website with the best UX.
+
+<ul>
+<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dev.mohammadzolghadr@gmail.com&su=Subject&body=Body">Gmail : dev.mohammadzolghadr@gmail.com</a></li>
+<li><a href="https://www.linkedin.com/in/mohammad-zolghadr">Linkedin : mohammad-zolghadr</a></li>
+<li><a href="https://instagram.com/mozo.plus">Instagram : @mozo.plus</a></li>
+<li><a href="https://github.com/mohammad-zolghadr">Github : mohammad-zolghadr</a></li>
+</ul>
+
+---
+
+The current version of react-hooks-plus includes the functions and hooks that were tested and presented in the initial version
+
+If you find any ideas, suggestions, problems or bugs, please let me know
+
+The main forum for free and community support is the project [Issues](https://github.com/mohammad-zolghadr/react-hooks-plus/issues) on GitHub
+
+🔼 Released on : April/2023 - Mohammad Zolghadr
