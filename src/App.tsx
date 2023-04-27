@@ -25,6 +25,7 @@ import { useConGroup } from './lib/index';
 import { useConTable } from './lib/index';
 import { useConTime } from './lib/index';
 import { useMedia } from './lib/index';
+import { useScroll } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -97,6 +98,9 @@ function App() {
   const isMobile = useMedia(['(max-width: 767px)'], [true], false);
 
   useConLog(isMobile, 'MediaQuery is under 767px : ');
+
+  const { x, y } = useScroll();
+  useConLog(`X : ${x} - Y : ${y}`);
 
   return (
     <div style={styleContainer}>

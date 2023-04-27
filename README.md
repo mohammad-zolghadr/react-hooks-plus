@@ -38,6 +38,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-hover">useHover</a></li>
 <li><a href="#use-fetch">useFetch</a></li>
 <li><a href="#use-media">useMedia</a></li>
+<li><a href="#use-scroll">useScroll</a></li>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
@@ -494,9 +495,11 @@ import { useMedia } from 'react-hooks-plus';
 Then, you can use this hook in your component like this:
 
 > useMedia(queries: string[], values: T[], defaultValue: T)
-> `Queries` must be an `array of CSS media queries` (e.g. ['(max-width: 768px)', '(orientation: landscape)']).
-> `Values` must be an `array of any type`, corresponding to the queries (e.g. [true, 'large']).
-> `DefaultValue` is the value returned when none of the media queries match (e.g. false).
+>
+> 1. `Queries` must be an `array of CSS media queries` (e.g. ['(max-width: 768px)', '(orientation: landscape)']).
+> 2. `Values` must be an `array of any type`, corresponding to the queries (e.g. [true, 'large']).
+> 3. `DefaultValue` is the value returned when none of the media queries match (e.g. false).
+
 > The hook returns the **current value, based on the current screen size**.
 
 Example :
@@ -514,6 +517,40 @@ function App() {
     </div>
   );
 }
+```
+
+---
+
+## <h2 id="use-scroll">useScroll <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useScroll } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useScroll` hook `returns two states x and y`
+
+> Both states, as their name suggests, **indicate the amount that has been scrolled from the page**
+
+Example :
+
+```javascript
+import useScroll from 'react-hooks-plus';
+
+const MyComponent = () => {
+  const { x, y } = useScroll();
+
+  return (
+    <div>
+      <p>Current scroll position:</p>
+      <p>X: {x}</p>
+      <p>Y: {y}</p>
+    </div>
+  );
+};
 ```
 
 ---
