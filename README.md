@@ -637,10 +637,9 @@ import { useConLog } from 'react-hooks-plus';
 
 Then, you can use this hook in your component like this:
 
-> The `useConLog` hook actually **executes once every time the state changes and prints a message in console.log**. You can also enter the text of the message manually
+> The `useConLog` hook actually **executes once every time the state changes and prints a message in console.log**.
 
-> The first parameter of this hook is your `Content ot State`
-> Your second parameter is the `text of the message`, **this part is optional** and You can leave this field blank
+> You can enter as many values ​​as you want in its input parameter
 
 **In general, this hook for debugging will greatly speed up your work**
 
@@ -652,7 +651,7 @@ import useConLog from 'react-hooks-plus';
 function MyComponent() {
   const [count, setCount] = useState(0);
 
-  useConLog(count);
+  useConLog('Count is : ', count);
 
   return (
     <div>

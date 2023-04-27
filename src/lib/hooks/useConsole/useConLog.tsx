@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-function useConLog(state: any, text: string = 'State changed: ') {
+function useConLog(...inputs: any[]) {
   useEffect(() => {
-    console.log(text, state);
-  }, [state]);
+    console.log(...inputs);
+  }, [inputs]);
 }
 
 export default useConLog;

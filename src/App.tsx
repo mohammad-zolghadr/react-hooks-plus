@@ -73,7 +73,7 @@ function App() {
   const [hoverRef, isHovered] = useHover();
 
   const isOnScreen = useOnScreen(hoverRef);
-  useConLog(isOnScreen, 'Visible on Screen : ');
+  useConLog('Visible on Screen : ', isOnScreen);
 
   const handleClickOutside = () => {
     console.log('Clicked outside!');
@@ -102,13 +102,13 @@ function App() {
 
   const isMobile = useMedia(['(max-width: 767px)'], [true], false);
 
-  useConLog(isMobile, 'MediaQuery is under 767px : ');
+  useConLog('MediaQuery is under 767px : ', isMobile);
 
   const { x, y } = useScroll();
-  useConLog(`X : ${x} - Y : ${y}`);
+  useConLog('X : ', x, ' - Y : ', y);
 
   const { width, height } = useScreen();
-  useConLog(`Width : ${width} - Height : ${height}`);
+  useConLog('Width : ', width, ' - Height : ', height);
 
   return (
     <div style={styleContainer}>
