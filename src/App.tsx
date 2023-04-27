@@ -26,6 +26,7 @@ import { useConTable } from './lib/index';
 import { useConTime } from './lib/index';
 import { useMedia } from './lib/index';
 import { useScroll } from './lib/index';
+import { useScreen } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -101,6 +102,9 @@ function App() {
 
   const { x, y } = useScroll();
   useConLog(`X : ${x} - Y : ${y}`);
+
+  const { width, height } = useScreen();
+  useConLog(`Width : ${width} - Height : ${height}`);
 
   return (
     <div style={styleContainer}>

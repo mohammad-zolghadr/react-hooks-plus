@@ -39,6 +39,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-fetch">useFetch</a></li>
 <li><a href="#use-media">useMedia</a></li>
 <li><a href="#use-scroll">useScroll</a></li>
+<li><a href="#use-screen">useScreen</a></li>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
@@ -548,6 +549,38 @@ const MyComponent = () => {
       <p>Current scroll position:</p>
       <p>X: {x}</p>
       <p>Y: {y}</p>
+    </div>
+  );
+};
+```
+
+---
+
+## <h2 id="use-screen">useScreen <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useScreen } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useScreen` hook `returns two states width and height`
+
+> Both states, as their name suggests, **show the current size of width and height**
+
+Example :
+
+```javascript
+import { useScreen } from 'react-hooks-plus';
+
+const MyComponent = () => {
+  const { width, height } = useScreen();
+
+  return (
+    <div>
+      My screen dimensions are {width}px x {height}px
     </div>
   );
 };
