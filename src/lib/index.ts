@@ -64,3 +64,6 @@ export { useScroll };
 // ========== screen
 import useScreen from './hooks/useScreen';
 export { useScreen };
+// ========== on screen
+import useOnScreen from './hooks/useOnScreen';
+export { useOnScreen };

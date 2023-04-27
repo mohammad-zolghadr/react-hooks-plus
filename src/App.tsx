@@ -27,6 +27,7 @@ import { useConTime } from './lib/index';
 import { useMedia } from './lib/index';
 import { useScroll } from './lib/index';
 import { useScreen } from './lib/index';
+import { useOnScreen } from './lib/index';
 
 const styleFlex: {} = {
   display: 'flex',
@@ -70,6 +71,9 @@ function App() {
   const myRef = useRef(null);
 
   const [hoverRef, isHovered] = useHover();
+
+  const isOnScreen = useOnScreen(hoverRef);
+  useConLog(isOnScreen, 'Visible on Screen : ');
 
   const handleClickOutside = () => {
     console.log('Clicked outside!');

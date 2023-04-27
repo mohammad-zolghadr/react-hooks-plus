@@ -40,6 +40,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-media">useMedia</a></li>
 <li><a href="#use-scroll">useScroll</a></li>
 <li><a href="#use-screen">useScreen</a></li>
+<li><a href="#use-on-screen">useOnScreen</a></li>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
@@ -584,6 +585,42 @@ const MyComponent = () => {
     </div>
   );
 };
+```
+
+---
+
+## <h2 id="use-on-screen">useOnScreen <a href="#toc">&uarr;</a></h2>
+
+First you need to import
+
+```javascript
+import { useOnScreen } from 'react-hooks-plus';
+```
+
+Then, you can use this hook in your component like this:
+
+> The `useOnScreen` hook receives a `ref` as an input parameter and `returns a boolean` value
+
+> If this boolean value is `true`, that is, the element for which we considered the ref value, **will be seen in the viewport that is exposed to the user**.
+
+> If its value is `false`, it may be due to scrolling or..., this element is at the bottom or top of the page and the **user does not see it in the viewport**.
+
+Example :
+
+```javascript
+import { useRef } from 'react';
+import useOnScreen from 'react-hooks-plus';
+
+function MyComponent() {
+  const ref = useRef(null);
+  const isOnScreen = useOnScreen(ref);
+
+  return (
+    <div ref={ref}>
+      {isOnScreen ? 'Visible on screen' : 'Not visible on screen'}
+    </div>
+  );
+}
 ```
 
 ---
