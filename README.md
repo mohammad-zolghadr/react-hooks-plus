@@ -1,28 +1,20 @@
 <img src="https://user-images.githubusercontent.com/48680310/234998416-795877dd-d7cd-44d1-b788-f819605f7785.png" />
 
-<div style="display:flex">
-
 <a href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/badge/-on github-323232?style=flat&logo=github&logoColor=white"/></a>
 <span> </span>
 <a href="https://npmjs.org/package/react-hooks-plus"><img src="https://img.shields.io/badge/-on npm-bb2222?style=flat&logo=npm"/></a>
 <span> </span>
-
 <span>[![install size](https://packagephobia.com/badge?p=react-hooks-plus)](https://packagephobia.com/result?p=react-hooks-plus)
 </span>
-
 <span> </span>
 <span>[![NPM Downloads](https://img.shields.io/npm/dm/react-hooks-plus.svg?style=flat)](https://npmcharts.com/compare/react-hooks-plus?minimal=true)
 </span>
-
 <span> </span>
-
 <a  href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/github/stars/mohammad-zolghadr/react-hooks-plus?label=star%20on%20github&logoColor=%23222222&style=flat" /></a>
 
-</div>
+Increasing **speed** and **accuracy** is one of the main criteria for cleaner and better coding
 
 <a href="#contact-me">📞 Who I am and how to communicate with me</a>
-
-Increasing **speed** and **accuracy** is one of the main criteria for cleaner and better coding
 
 <h3 id="toc">Table of Content </h3>
 
