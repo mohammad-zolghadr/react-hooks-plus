@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-plus",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "type": "module",
   "private": false,
   "description": "Useful React Hooks and Functions",
@@ -45,6 +45,9 @@
     "useConsoleTable",
     "useConsoleTime",
     "useMedia",
+    "useScreen",
+    "useOnScreen",
+    "useScroll",
     "precisionForDecimal",
     "Mohammad Zolghadr"
   ],
