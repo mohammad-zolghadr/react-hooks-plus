@@ -25,6 +25,30 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#random-string-symbols-length">A random string containing numbers, letters and symbols</a></li>
 </ul>
 </details></li>
+<li>
+<details><summary>Array Functions</summary>
+<ul>
+<li><a href="#unique-array">uniqueArray</a></li>
+<li><a href="#shuffle-array">shuffleArray</a></li>
+<li><a href="#chunk">chunk</a></li>
+<li><a href="#flatten-array">flattenArray</a></li>
+<li><a href="#find-max-index">findMaxIndex</a></li>
+<li><a href="#is-array-empty">isArrayEmpty</a></li>
+<li><a href="#get-max-element">getMaxElement</a></li>
+<li><a href="#get-min-element">getMinElement</a></li>
+<li><a href="#has-element">hasElement</a></li>
+<li><a href="#sum">sum</a></li>
+<li><a href="#average">average</a></li>
+<li><a href="#add-element-to-array-if-not-exist">addElementToArrayIfNotExist</a></li>
+<li><a href="#add-object-to-array-if-prop-not-exist">addObjectToArrayIfPropNotExist</a></li>
+<li><a href="#remove-element">removeElement</a></li>
+<li><a href="#remove-duplicates-by-property">removeDuplicatesByProperty</a></li>
+<li><a href="#sort-by-property">sortByProperty</a></li>
+<li><a href="#sort-array-desc">sortArrayDesc</a></li>
+<li><a href="#sort-array-asc">sortArrayAsc</a></li>
+</ul>
+</details>
+</li>
 <li><a href="#func-local-storage">Local Storage</a></li>
 <li><a href="#func-decimal-precision">Decimal With Precision</a></li>
 </ul>
@@ -41,6 +65,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-scroll">useScroll</a></li>
 <li><a href="#use-screen">useScreen</a></li>
 <li><a href="#use-on-screen">useOnScreen</a></li>
+<li>
 <details><summary>Use Console</summary>
 <ul>
 <li><a href="#use-con-log">useConLog</a></li>
@@ -49,6 +74,7 @@ Currently, the following sections have been developed and you can use them
 <li><a href="#use-con-time">useConTime</a></li>
 </ul>
 </details>
+</li>
 </details>
 </ul>
 </details>
@@ -67,7 +93,7 @@ or
 
 ---
 
-## <h2 id="use-random">Random Functions <a href="#toc">&uarr;</a></h2>
+## <h2 id="random-functions">Random Functions <a href="#toc">&uarr;</a></h2>
 
 ### <h3 id="random-number">A Random Number <a href="#toc">&uarr;</a></h3>
 
@@ -221,6 +247,369 @@ console.log(randomStringSymbolsLength(12));
 ```
 
 By doing this, your log output will be a `random string of letters, numbers, and symbols that is 12 characters long`
+
+---
+
+## <h2 id="array-functions">Array Functions <a href="#toc">&uarr;</a></h2>
+
+### <h3 id="unique-array">UniqueArray <a href="#toc">&uarr;</a></h3>
+
+`UniqueArray` : Takes an array and returns a new array containing only unique elements.
+
+First you need to import
+
+```javascript
+import { uniqueArray } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = uniqueArray(arr); // [1, 2, 3, 4]
+```
+
+---
+
+### <h3 id="shuffle-array">shuffleArray <a href="#toc">&uarr;</a></h3>
+
+`shuffleArray` : This function takes in an array and shuffles its contents randomly
+
+First you need to import
+
+```javascript
+import { shuffleArray } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6];
+const shuffledArray = shuffleArray(myArray);
+```
+
+---
+
+### <h3 id="chunk">chunk <a href="#toc">&uarr;</a></h3>
+
+`chunk` : This function takes an array and a chunk size and returns a new array with the original array split into chunks of the specified size
+
+First you need to import
+
+```javascript
+import { chunk } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr = [1, 2, 3, 4, 5, 6];
+const chunkedArr = chunk(arr, 3); // returns [[1, 2, 3], [4, 5, 6]]
+```
+
+---
+
+### <h3 id="flatten-array">flattenArray <a href="#toc">&uarr;</a></h3>
+
+`flattenArray` : Takes an array of arrays and flattens it into a single array
+
+First you need to import
+
+```javascript
+import { flattenArray } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr = [[1, 2], [3, 4], [5]];
+const flattenedArr = flattenArray(arr); // [1, 2, 3, 4, 5]
+```
+
+---
+
+### <h3 id="find-max-index">findMaxIndex <a href="#toc">&uarr;</a></h3>
+
+The `findMaxIndex` function takes an array of numbers as input and returns the index of the largest element in the array.
+
+First you need to import
+
+```javascript
+import { findMaxIndex } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr1 = [3, 7, 1, 9, 4];
+const maxIndex = findMaxIndex(arr1);
+console.log(
+  `The largest element in arr1 is ${arr1[maxIndex]} at index ${maxIndex}.`
+);
+```
+
+---
+
+### <h3 id="is-array-empty">isArrayEmpty <a href="#toc">&uarr;</a></h3>
+
+`isArrayEmpty` : Function to check if an array is empty
+
+First you need to import
+
+```javascript
+import { isArrayEmpty } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const myArr = [4, 6, 8, 5];
+console.log(isArrayEmpty(myArr)); // false
+```
+
+---
+
+### <h3 id="get-max-element">getMaxElement <a href="#toc">&uarr;</a></h3>
+
+`getMaxElement` : Function to get the maximum element in an array
+
+First you need to import
+
+```javascript
+import { getMaxElement } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr: number[] = [10, 5, 20, 15];
+console.log(getMaxElement(arr)); // Output: 20
+```
+
+---
+
+### <h3 id="get-min-element">getMinElement <a href="#toc">&uarr;</a></h3>
+
+`getMinElement` : Function to get the minimum element in an array
+
+First you need to import
+
+```javascript
+import { getMinElement } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr: number[] = [10, 5, 20, 15];
+console.log(getMinElement(arr)); // Output: 5
+```
+
+---
+
+### <h3 id="has-element">hasElement <a href="#toc">&uarr;</a></h3>
+
+`hasElement` : Function to check if an array contains a specific element or not
+First you need to import
+
+```javascript
+import { hasElement } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const fruits: string[] = ['apple', 'banana', 'orange'];
+console.log(hasElement(fruits, 'banana')); // Output: true
+```
+
+---
+
+### <h3 id="sum">sum <a href="#toc">&uarr;</a></h3>
+
+`sum` : This function returns the sum of all the elements in the input array.
+
+First you need to import
+
+```javascript
+import { sum } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const total = sum(numbers);
+console.log(`The sum is ${total}`); //output: 15
+```
+
+---
+
+### <h3 id="average">average <a href="#toc">&uarr;</a></h3>
+
+`average` : Returns the average value of the elements of the array
+
+First you need to import
+
+```javascript
+import { average } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const arr = [2, 4, 6, 8, 10];
+const avg = average(arr); // returns 6
+```
+
+---
+
+### <h3 id="add-element-to-array-if-not-exist">addElementToArrayIfNotExist <a href="#toc">&uarr;</a></h3>
+
+`addElementToArrayIfNotExist` : Function to add an element to an array if it doesn't exist in the array.
+
+First you need to import
+
+```javascript
+import { addElementToArrayIfNotExist } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+let newArr = addElementToArrayIfNotExist(oldArr, elementToAdd);
+```
+
+---
+
+### <h3 id="add-object-to-array-if-prop-not-exist">addObjectToArrayIfPropNotExist <a href="#toc">&uarr;</a></h3>
+
+`addObjectToArrayIfPropNotExist` : Function to add an object to an array if a specific property of that object doesn't exist in the array.
+
+First you need to import
+
+```javascript
+import { addObjectToArrayIfPropNotExist } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+let newArr = addObjectToArrayIfPropNotExist(oldArr, objToAdd, 'propertyName');
+```
+
+---
+
+### <h3 id="remove-element">removeElement <a href="#toc">&uarr;</a></h3>
+
+`removeElement` : Function to remove a specific element from an array
+
+First you need to import
+
+```javascript
+import { removeElement } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+let numbers: number[] = [10, 20, 30, 40];
+numbers = removeElement(numbers, 20);
+console.log(numbers); // Output: [10, 30, 40]
+```
+
+---
+
+### <h3 id="remove-duplicates-by-property">removeDuplicatesByProperty <a href="#toc">&uarr;</a></h3>
+
+First you need to import
+
+`removeDuplicatesByProperty` : This function takes an array of objects and in the second parameter of the function, it takes a key and checks **if there were objects in this array that had the same key, it removes all duplicate items**.
+
+```javascript
+import { removeDuplicatesByProperty } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const people = [
+  { id: 1, name: 'John', age: 30 },
+  { id: 2, name: 'Jane', age: 25 },
+  { id: 3, name: 'John', age: 30 },
+  { id: 4, name: 'Bob', age: 40 },
+  { id: 5, name: 'Jane', age: 20 },
+];
+
+const uniquePeople = removeDuplicatesByProperty(people, 'name');
+console.log(uniquePeople);
+/* Output:
+[
+  { id: 1, name: "John", age: 30 },
+  { id: 2, name: "Jane", age: 25 },
+  { id: 4, name: "Bob", age:40 }
+];
+*/
+```
+
+---
+
+### <h3 id="sort-by-property">sortByProperty <a href="#toc">&uarr;</a></h3>
+
+`sortByProperty`: Takes an array of objects and a property name and returns a new array sorted by the values of that property.
+
+First you need to import
+
+```javascript
+import { sortByProperty } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+const users = [
+  { name: 'John', age: 25 },
+  { name: 'Mary', age: 20 },
+  { name: 'Adam', age: 30 },
+];
+
+const sortedUsers = sortByProperty(users, 'age'); // [{ name: 'Mary', age: 20 }, { name: 'John', age: 25 }, { name: 'Adam', age: 30 }]
+```
+
+---
+
+### <h3 id="sort-array-desc">sortArrayDesc <a href="#toc">&uarr;</a></h3>
+
+`sortArrayDesc` : Function to sort an array in descending order.
+
+First you need to import
+
+```javascript
+import { sortArrayDesc } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+let newArr = sortArrayDesc(oldArr);
+```
+
+---
+
+### <h3 id="sort-array-asc">sortArrayAsc <a href="#toc">&uarr;</a></h3>
+
+`sortArrayAsc` : Function to sort an array in ascending order.
+
+First you need to import
+
+```javascript
+import { sortArrayAsc } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+let newArr = sortArrayAsc(oldArr);
+```
 
 ---
 
