@@ -7,10 +7,13 @@
 <a href="https://npmjs.org/package/react-hooks-plus"><img src="https://img.shields.io/badge/-on npm-bb2222?style=flat&logo=npm"/></a>
 <span> </span>
 
-[![install size](https://packagephobia.com/badge?p=react-hooks-plus)](https://packagephobia.com/result?p=react-hooks-plus)
-<span> </span>
+<span>[![install size](https://packagephobia.com/badge?p=react-hooks-plus)](https://packagephobia.com/result?p=react-hooks-plus)
+</span>
 
-[![NPM Downloads](https://img.shields.io/npm/dm/react-hooks-plus.svg?style=flat)](https://npmcharts.com/compare/react-hooks-plus?minimal=true)
+<span> </span>
+<span>[![NPM Downloads](https://img.shields.io/npm/dm/react-hooks-plus.svg?style=flat)](https://npmcharts.com/compare/react-hooks-plus?minimal=true)
+</span>
+
 <span> </span>
 
 <a  href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/github/stars/mohammad-zolghadr/react-hooks-plus?label=star%20on%20github&logoColor=%23222222&style=flat" /></a>
