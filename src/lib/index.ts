@@ -29,6 +29,47 @@ export { saveToLocalStorage, getFromLocalStorage };
 // ========== decimal
 import setPrecisionForDecimal from './funcs/funcDecimalNumber';
 export { setPrecisionForDecimal };
+// ========== Array
+import {
+  findMaxIndex,
+  removeDuplicatesByProperty,
+  removeElement,
+  sortArrayAsc,
+  sortByProperty,
+  sortArrayDesc,
+  addElementToArrayIfNotExist,
+  addObjectToArrayIfPropNotExist,
+  average,
+  hasElement,
+  getMaxElement,
+  getMinElement,
+  isArrayEmpty,
+  shuffleArray,
+  uniqueArray,
+  flattenArray,
+  chunk,
+  sum,
+} from './funcs/funcArray';
+export {
+  findMaxIndex,
+  removeDuplicatesByProperty,
+  removeElement,
+  sortArrayAsc,
+  sortByProperty,
+  sortArrayDesc,
+  addElementToArrayIfNotExist,
+  addObjectToArrayIfPropNotExist,
+  average,
+  hasElement,
+  getMaxElement,
+  getMinElement,
+  isArrayEmpty,
+  shuffleArray,
+  uniqueArray,
+  flattenArray,
+  chunk,
+  sum,
+};
 
 // ================================ Hooks =====================================
 // =========== copy to clipboard
