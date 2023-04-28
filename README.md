@@ -1,4 +1,6 @@
-<img src="https://user-images.githubusercontent.com/48680310/234998416-795877dd-d7cd-44d1-b788-f819605f7785.png" />
+<img src="https://user-images.githubusercontent.com/48680310/235084939-30b03cc9-2c7b-45c7-b220-955e27e4c4b5.png" />
+
+<a href="https://github.com/mohammad-zolghadr/react-hooks-plus" target="_blank"> <img src="https://user-images.githubusercontent.com/48680310/235084610-9e92ccf9-1cb6-4c20-8107-dcd6a22b2a77.png" /> </a>
 
 <a href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/badge/-on github-323232?style=flat&logo=github&logoColor=white"/></a>
 <span> </span>
@@ -9,8 +11,6 @@
 <span> </span>
 <span>[![NPM Downloads](https://img.shields.io/npm/dm/react-hooks-plus.svg?style=flat)](https://npmcharts.com/compare/react-hooks-plus?minimal=true)
 </span>
-<span> </span>
-<a  href="https://github.com/mohammad-zolghadr/react-hooks-plus"><img src="https://img.shields.io/github/stars/mohammad-zolghadr/react-hooks-plus?label=star%20on%20github&logoColor=%23222222&style=flat" /></a>
 
 Increasing **speed** and **accuracy** is one of the main criteria for cleaner and better coding
 
