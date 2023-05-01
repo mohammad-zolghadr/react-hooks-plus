@@ -14,7 +14,7 @@ import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
 import {
   convertToPersianNumber,
   separateNumbers,
-  convertToEnglishNum,
+  convertToEnglishNumber,
   isPersianNumber,
 } from './lib/index';
 import { setPrecisionForDecimal } from './lib/index';
@@ -108,7 +108,7 @@ function App() {
   useConGroup(data, 'My Group Label');
 
   const mNum = '۵,۲۲۶';
-  useConLog(convertToEnglishNum(mNum));
+  useConLog(convertToEnglishNumber(mNum));
   const myNumber = convertToPersianNumber(7775226);
   useConLog(
     separateNumbers(myNumber),

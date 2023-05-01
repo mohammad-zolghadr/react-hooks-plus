@@ -75,13 +75,13 @@ export {
 import {
   convertToPersianNumber,
   separateNumbers,
-  convertToEnglishNum,
+  convertToEnglishNumber,
   isPersianNumber,
 } from './funcs/funcNumber';
 export {
   convertToPersianNumber,
   separateNumbers,
-  convertToEnglishNum,
+  convertToEnglishNumber,
   isPersianNumber,
 };
 

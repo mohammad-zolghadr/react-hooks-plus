@@ -34,6 +34,15 @@ Increasing **speed** and **accuracy** is one of the main criteria for cleaner an
 <li><a href="#random-string-symbols-length">randomStringSymbolsLength</a></li>
 </ul>
 </details></li>
+<li><details>
+<summary>Number Functions</summary>
+<ul>
+<li><a href="#to-persian-number">convertToPersianNumber</a></li>
+<li><a href="#to-english-number">convertToEnglishNumber</a></li>
+<li><a href="#separate-number">separateNumbers</a></li>
+<li><a href="#is-persian-number">isPersianNumber</a></li>
+</ul>
+</details></li>
 <li>
 <details><summary>Array Functions</summary>
 <ul>
@@ -256,6 +265,92 @@ console.log(randomStringSymbolsLength(12));
 ```
 
 By doing this, your log output will be a `random string of letters, numbers, and symbols that is 12 characters long`
+
+---
+
+## <h2 id="number-functions">Random Functions <a href="#toc">&uarr;</a></h2>
+
+### <h3 id="to-persian-number">convertToPersianNumber <a href="#toc">&uarr;</a></h3>
+
+> This function **converts English numbers to Persian or Arabic**
+
+First you need to import
+
+```javascript
+import { convertToPersianNumber } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+//Example usage
+const input = '1234567890';
+const persianNum = convertToPersianNumber(input);
+console.log(persianNum); // "۱۲۳۴۵۶۷۸۹۰"
+```
+
+---
+
+### <h3 id="to-english-number">convertToEnglishNumber <a href="#toc">&uarr;</a></h3>
+
+> This function **converts EPersian or Arabic numbers to English**
+
+First you need to import
+
+```javascript
+import { convertToEnglishNumber } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+//Example usage
+let PersianNum = '۱۲۳۴۵';
+let engNum = convertToEnglishNumber(PersianNum);
+console.log(engNum); // output: 12345
+```
+
+---
+
+### <h3 id="separate-number">separateNumbers <a href="#toc">&uarr;</a></h3>
+
+> This function **separates the numbers three by three** with `,`
+
+First you need to import
+
+```javascript
+import { separateNumbers } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+//Example usage
+console.log(separateNumbers('1234567890')); // 1,234,567,890
+console.log(separateNumbers('۷۷۷۵۲۲۶')); // ۷,۷۷۵,۲۲۶
+```
+
+---
+
+### <h3 id="is-persian-number">isPersianNumber <a href="#toc">&uarr;</a></h3>
+
+> This function returns a Boolean value that indicates whether **the number you sent as input to this function is Persian (Arabic) or not**.
+
+First you need to import
+
+```javascript
+import { isPersianNumber } from 'react-hooks-plus';
+```
+
+And then to use it, proceed as follows :
+
+```javascript
+//Example usage
+console.log(isPersianNumber('۵,۲۲۶')); // true
+console.log(isPersianNumber('۵۲۲۶')); // true
+console.log(isPersianNumber(42735)); // false
+console.log(isPersianNumber('42,753')); // false
+```
 
 ---
 

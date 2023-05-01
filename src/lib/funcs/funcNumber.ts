@@ -12,7 +12,7 @@ function convertToPersianNumber(input: string | number): string {
   return output;
 }
 
-function convertToEnglishNum(num: string): string {
+function convertToEnglishNumber(num: string): string {
   let farsiNums = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
   let engNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   for (let i = 0; i < farsiNums.length; i++) {
@@ -24,7 +24,7 @@ function convertToEnglishNum(num: string): string {
 function separateNumbers(input: string | number): string {
   typeof input === 'number' ? (input = input.toString()) : '';
   const isPersian = isPersianNumber(input);
-  isPersian ? (input = convertToEnglishNum(input)) : '';
+  isPersian ? (input = convertToEnglishNumber(input)) : '';
   const regex = /\d{1,3}(?=(\d{3})+(?!\d))/g;
   let result = input.replace(regex, '$&,');
   return isPersian ? convertToPersianNumber(result) : result;
@@ -38,6 +38,6 @@ function isPersianNumber(input: string): boolean {
 export {
   convertToPersianNumber,
   separateNumbers,
-  convertToEnglishNum,
+  convertToEnglishNumber,
   isPersianNumber,
 };
