@@ -11,6 +11,12 @@ import {
   randomStringSymbolsLength,
 } from './lib/index';
 import { saveToLocalStorage, getFromLocalStorage } from './lib/index';
+import {
+  convertToPersianNumber,
+  separateNumbers,
+  convertToEnglishNum,
+  isPersianNumber,
+} from './lib/index';
 import { setPrecisionForDecimal } from './lib/index';
 import {
   findMaxIndex,
@@ -100,6 +106,15 @@ function App() {
   };
 
   useConGroup(data, 'My Group Label');
+
+  const mNum = '۵,۲۲۶';
+  useConLog(convertToEnglishNum(mNum));
+  const myNumber = convertToPersianNumber(7775226);
+  useConLog(
+    separateNumbers(myNumber),
+    ' - is Persian Number ? ',
+    isPersianNumber(myNumber)
+  );
 
   useOnClickOutside(myRef, handleClickOutside);
 

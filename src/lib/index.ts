@@ -29,7 +29,7 @@ export { saveToLocalStorage, getFromLocalStorage };
 // ========== decimal
 import setPrecisionForDecimal from './funcs/funcDecimalNumber';
 export { setPrecisionForDecimal };
-// ========== Array
+// ========== array
 import {
   findMaxIndex,
   removeDuplicatesByProperty,
@@ -69,6 +69,20 @@ export {
   flattenArray,
   chunk,
   sum,
+};
+
+// ========== number
+import {
+  convertToPersianNumber,
+  separateNumbers,
+  convertToEnglishNum,
+  isPersianNumber,
+} from './funcs/funcNumber';
+export {
+  convertToPersianNumber,
+  separateNumbers,
+  convertToEnglishNum,
+  isPersianNumber,
 };
 
 // ================================ Hooks =====================================
