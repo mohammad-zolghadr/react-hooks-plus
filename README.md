@@ -293,7 +293,7 @@ console.log(persianNum); // "۱۲۳۴۵۶۷۸۹۰"
 
 ### <h3 id="to-english-number">convertToEnglishNumber <a href="#toc">&uarr;</a></h3>
 
-> This function **converts EPersian or Arabic numbers to English**
+> This function **converts Persian or Arabic numbers to English**
 
 First you need to import
 
